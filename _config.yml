@@ -6,9 +6,8 @@ description: > # this means to ignore newlines until "baseurl:"
 keywords: piráti,komunální volby,volby 2014,kandidáti,Olaf Deutsch,Vladislav Tobias Esner,Jaroslava Šebková,Ivan Polák,Česká pirátská strana,Zdravé Letňany
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://praha18.pirati.cz" # the base hostname & protocol for your site
-twitter: PiratePartyCZ
-facebook: ceska.piratska.strana
-youtube: CeskaPiratskaStrana
+facebook: piratiletnany
+styles: [ praha18 ]
 
 # Build settings
 markdown: kramdown
