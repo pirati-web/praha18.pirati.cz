@@ -4,7 +4,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="cs"><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="cs"><!--<![endif]-->
     {% include head.html %}
-    <body>
+    <body{% if page.wide %} class="full"{% endif %}>
         <div class="header-top">
             <div class="container">
                 <div class="row no-margins">
@@ -12,17 +12,17 @@
                         <div class="nav-touch"></div>
                         <nav>
                             <ul class="clearfix" id="menu">
-                                <li class="active"><a href="/">TOP 4</a></li>
-                                <li><a href="program">Program</a></li>
-                                <li><a href="clanky">Články</a></li>
+                                <li{% if page.url == '/' %} class="active"{% endif %}><a href="/">TOP 4</a></li>
+                                <li{% if page.url == '/program.html' %} class="active"{% endif %}><a href="program.html">Program</a></li>
+                                <li{% if page.url == '/clanky.html' %} class="active"{% endif %}><a href="clanky.html">Články</a></li>
                             </ul>
                         </nav>
                     </div>
                     <div class="span3">
                         <ul class="header-social">
-                            <li class="twitter"><a href="https://twitter.com/PiratePartyCZ" target="_blank">Twitter</a></li>
-                            <li class="facebook"><a href="https://www.facebook.com/ceska.piratska.strana" target="_blank">Facebook</a></li>
-                            <li class="youtube"><a href="http://www.youtube.com/user/CeskaPiratskaStrana" target="_blank">You Tube</a></li>
+                            <li class="twitter"><a href="https://twitter.com/{{ site.twitter }}" target="_blank">Twitter</a></li>
+                            <li class="facebook"><a href="https://www.facebook.com/{{ site.facebook }}" target="_blank">Facebook</a></li>
+                            <li class="youtube"><a href="http://www.youtube.com/user/{{ site.yoututbe }}" target="_blank">YouTube</a></li>
                         </ul>
                     </div>
                 </div>
@@ -47,75 +47,47 @@
             </div>
         </header>
         <section class="container">
+            {% if page.wide != true %}
             <div class="left-side">
                 <div id="slider" class="flexslider">
                     <ul class="slides">
+                        {% for candidate in site.candidates %}
+                        {% assign key = candidate[0] %}
                         <li>
-                            <a href="ivan-bartos/">
-                                <img src="root/obsah/1-ivan.jpg" alt="" />
+                            <a href="{{ site.candidates[key].page }}">
+                                <img src="images/candidates/{{ site.candidates[key].image_big }}" alt="" />
                             </a>
                         </li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <h3>Naší kandidáti</h3>
                 <div id="carousel" class="left-side-carousel flexslider">
                     <ul class="slides">
-                        <li onclick="document.location.href='ivan-bartos/';">
-                            <div class="left-side-carousel-item clearfix">
-                                <a class="thumb" href="ivan-bartos/">
-                                    <img src="root/obsah/1-ivan-th.jpg" alt="" />
-                                </a>
+                        {% for candidate in site.candidates %}
+                        {% assign key = candidate[0] %}
+                        <li onclick="document.location.href='{{ site.candidates[key].page }}';">
+                            <a class="left-side-carousel-item" href="{{ site.candidates[key].page }}">
+                                <img class="thumb" src="images/candidates/{{ site.candidates[key].image }}" alt="">
                                 <p>
-                                    <a href="ivan-bartos/">Phdr. Ivan Bartoš, Ph.D.</a>
-                                    <span>Lídr kandídatky</span>
+                                    <strong>{{ site.candidates[key].fullname }}</strong>
+                                    <span>{{ site.candidates[key].sub }}</span>
                                 </p>
-                            </div>
+                            </a>
                         </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
-    
             <div class="right-side">
-                <h1>Ivan Bartoš</h1>
-                <div class="anotation">otevřená Evropa</div>
-                <div class="perex">Předseda Pirátské strany Ivan Bartoš se v Evropském parlamentu chce soustředit na základní pirátská témata – svobodné šíření informací, autorský zákon, svobodný internet a práva občanů na informace a na soukromí. Se svým neortodoxním vzhledem a aktivně otevřeným přístupem k politické práci je přímým kontrastem ostatních profesionálních poslanců – a stejně neortodoxně chce řešit témata, jenž jsou jeho životním posláním. Prosazuje maximální otevřenost, transparentnost a kooperaci.
-                </div>
-                <p>
-                    Leader pirátské kandidátky pro volby do Evropského parlamentu a jeden ze zakladatelů Pirátské strany Ivan Bartoš je také od roku 2009 předsedou (s krátkou přestávkou v létě 2013). Vystudoval Ústav informačních studií a knihovnictví na Filozofické fakultě Univerzity Karlovy v Praze. Během studia se zabýval převážně problematikou vyhledávání a získávání informací z heterogenních systémů a možnostmi jejich integrace. Před ukončením studia působil na Computer Science Faculty na University of New Orleans, LA, USA. Angažuje se v aktivitách souvisejících s DIY kulturou. Jako DJ mixuje psytrance, hraje na akordeon a zpívá v kapele. Je vášnivý čtenář. Má psa, dva pískomily a chová křečky.
-                </p>
-                <p>
-                    <strong>1. Jaký je Váš osobní vztah k EU?</strong>
-                    <br />
-                    Vidím nedostatečně využitý potenciál. Tam, kde selhávají jednotlivé národní parlamenty a legislativy, měla by Evropská unie tento handicap vyvažovat. Nejen v Evropě ale i celém světě jsme přece všichni na jedné lodi. EU je o spolupráci na společné cestě. Není to kolbiště národních zájmů, ani kasička, kam všichni něco dávají a každý chce co nejvíce následně urvat.
-                </p>
-                <p>
-                    <strong>2. Jaké vůbec mají europoslanci možnosti prosazovat zájmy ČR v EU a co byste chtěl v EP prosazovat v zájmu ČR Vy v případě zvolení?</strong><br />
-                    Chceme hlavně prosazovat zájmy občanů v oblastech, které jsou Pirátům vlastní. Rozhodnutí Evropského parlamentu se týkají všech občanů Evropské unie, já osobně se chci soustředit na záležitosti, které jsou společné všem – například odmítání účasti na mezinárodních smlouvách, které poškozují práva Evropanů, například ACTA, TIPS či snahy o narušení soukromí občanů různými zákony o sledování či uchovávání citlivých údajů,
-                </p>
-                <p>
-                    <strong>3. Proč se podle Vás České republice vyplatí být součástí EU?</strong><br />
-Většina legislativy, která vzniká v České republice, je navázána na rozhodnutí na evropské úrovni. Pokud chceme mít možnost tuto legislativu ovlivňovat ve prospěch voličů, tak, aby byla v souladu s pirátským programem, chceme tak činit přímo u zdroje. Navíc Česká republika leží geograficky v samém srdci Evropy.
-                </p>
-                <p>
-                    <strong>4. Co nám podle Vás Evropská unie dává a co nám bere?</strong><br />
-                    Dává nám možnost podílet se na rozhodování na vyšší úrovni než jsou jen národní parlamenty. Synergie snah jednotlivých států může učinit společenství lepším – to, že tomu tak v současnosti ne vždy je, to je záležitost, kterou chceme změnit. Ve státech Evropské Unie již nyní pracuje spousta vynikajících českých odborníků z nejrůznějších oborů, předpokládám ale, že otázka je směřována na Evropský parlament – tam se volí podle stranického klíče a ne podle odborného, proto již podle logiky věci nejsou Češi v Evropském parlamentu povětšinou zastupováni odborníky, ale neutrálními a loajálními straníky.&nbsp;
-                </p>
-                <p>
-                    <strong>5. Proč by voliči měli volit právě Pirátskou stranu, a proč by měli dát preferenční hlas právě vám?</strong><br />
-                    Nikdy jsem neuhnul z cesty, a nemíním to dělat ani teď – zavazuji se k dodržování pirátských zásad a programu a k prosazování jejich hlavních tezí ve prospěch občanů České republiky a Evropy v duchu pirátské filozofie. Piráti jsou pro maximální otevřenost, budeme vás informovat o všem, co budeme v Evropském parlamentu dělat – počítáme například s online přenosy z jednání. Jsme jiní než ostatní, a proto nás prosím nezapomeňte volit u voleb do Evropského parlamentu – jsme totiž všichni na jedné lodi, a Evropa je naše moře.
-                </p>
-                <p>
-                    <br /><strong>​CITÁTY</strong><br />
-                    <br />
-                    <em>„Komunikace českých poslanců v Evropském parlamentu není dobrá ani špatná – ona prostě neexistuje.“</em><br />
-                    <br />
-                    <em>„Lidé by obecně měli věci sdílet a hledat cesty spolupráce, nikoliv se separovat či se vymezovat.“</em><br />
-                    <br />
-                    <em>„Jsem pro maximální otevřenost a transparenci v jakékoliv komunikaci mezi politiky a občany.“</em><br />
-                    <br />
-                    <em>„Jsme všichni na jedné lodi, a Evropa je naše moře.“</em>
-                </p>
+                {{ content }} 
             </div>
+            {% endif %}
+            {% if page.wide %}
+            <div class="right-side w2">
+                {{ content }}
+            </div>
+            {% endif %}
         </section>
         <footer>
             <section id="footer-copyright">
@@ -123,7 +95,7 @@ Většina legislativy, která vzniká v České republice, je navázána na rozh
                     <div class="row">
                         <div class="span9 text-left">
                             <p>
-                                <span style="-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-o-transform:rotate(180deg);-khtml-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);display:inline-block;font-size:1em">©</span> Piráti, 2014. Všechna práva vyhlazena. Sdílejte a nechte ostatní sdílet za stejných podmínek. CC-BY-SA 3.0 Unported
+                                <span style="-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-o-transform:rotate(180deg);-khtml-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);display:inline-block;font-size:1em">©</span> Piráti, 2014. Všechna práva vyhlazena. Kopírování je aktem lásky. | Obsah této stránky můžete volně šířit podle licence <a href="http://creativecommons.org/licenses/by/3.0/cz/">Creative commons Uveďte autora 3.0</a>. {{ page.footer }}
                             </p>
                         </div>
                         <div class="span3 text-right">
