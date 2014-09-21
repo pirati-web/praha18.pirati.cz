@@ -1,8 +1,8 @@
 # Site settings
 title: Piráti a Zdravé Letňany / Komunální volby 2014
 description: > # this means to ignore newlines until "baseurl:"
-  Evropa je naše moře! S tímto heslem vstupuje Česká pirátská strana 
-  do Evropských parlamentních voleb, kde bude prosazovat základní pirátské myšlenky.
+  Česká pirátská strana s podporou občanského sdružení Zdravé Letňany
+  Pro volby do zastupitelstva Městské části Praha 18 - Letňany konané ve dnech 10. a 11. 10. 2014
 keywords: piráti,komunální volby,volby 2014,kandidáti,Olaf Deutsch,Vladislav Tobias Esner,Jaroslava Šebková,Ivan Polák,Česká pirátská strana,Zdravé Letňany
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://praha18.pirati.cz" # the base hostname & protocol for your site
