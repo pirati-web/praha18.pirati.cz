@@ -1,12 +1,11 @@
 # Site settings
-title: Piráti.cz
+title: Piráti a Zdravé Letňany / Komunální volby 2014
 description: > # this means to ignore newlines until "baseurl:"
   Evropa je naše moře! S tímto heslem vstupuje Česká pirátská strana 
   do Evropských parlamentních voleb, kde bude prosazovat základní pirátské myšlenky.
 keywords: piráti,evropa,volby 2014,evropský parlament,kandidáti,Ivan Bartoš,Marcel Kolaja,Markéta Gregorová,Vojtěch Pikal,Tomáš Tožička,Česká pirátská strana
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://volimpiraty.cz" # the base hostname & protocol for your site
-ga: UA-46899507-7
+url: "http://praha18.pirati.cz" # the base hostname & protocol for your site
 twitter: PiratePartyCZ
 facebook: ceska.piratska.strana
 youtube: CeskaPiratskaStrana
@@ -16,13 +15,13 @@ markdown: kramdown
 
 # candidates
 candidates:
-    bartos:
-        fullname: Phdr. Ivan Bartoš, Ph.D.
-        name: Ivan Bartoš
-        sub: Lídr kandidátky
-        image: 1-ivan-th.jpg
-        image_big: 1-ivan.jpg
-        page: ivan-bartos.html
+    deutsch:
+        fullname: Olaf Deutsch
+        name: Olaf Deutsch
+        sub: předseda Zdravé Letňany o.s.
+        image: deutsch-th.jpg
+        image_big: deutsch.jpg
+        page: olaf-deutsch.html
     kolaja:
         fullname: Marcel Kolaja
         name: Marcel Kolaja
