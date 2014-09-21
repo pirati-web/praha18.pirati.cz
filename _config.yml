@@ -17,28 +17,28 @@ candidates:
     deutsch:
         fullname: Olaf Deutsch
         name: Olaf Deutsch
-        sub: předseda Zdravé Letňany o.s.
+        sub: Lídr kandidátky, Zdravé Letňany o.s.
         image: deutsch-th.jpg
         image_big: deutsch.jpg
         page: olaf-deutsch.html
     esner:
         fullname: Vladislav Tobias Esner
         name: Vladislav Tobias Esner
-        sub: Kandidát číslo 2
+        sub: Kandidát číslo 2, Česká pirátská strana
         image: esner-th.jpg
         image_big: esner.jpg
         page: tobias-esner.html
     sebkova:
         fullname: Jaroslava Šebková
         name: Jaroslava Šebková
-        sub: Kandidát číslo 3
+        sub: Kandidát číslo 3, Zdravé Letňany o.s.
         image: sebkova-th.jpg
         image_big: sebkova.jpg
         page: jaroslava-sebkova.html
     polak:
         fullname: Ivan Polák
         name: Ivan Polák
-        sub: Kandidát číslo 4
+        sub: Kandidát číslo 4, Zdravé Letňany o.s.
         image: polak-th.jpg
         image_big: polak.jpg
         page: ivan-polak.html
